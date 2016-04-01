@@ -51,4 +51,11 @@ ImgWarper.Point.weightedAverage = function (p, w) {
 
 ImgWarper.Point.prototype.InfintyNormDistanceTo = function (o) {
   return Math.max(Math.abs(this.x - o.x), Math.abs(this.y - o.y));
+};
+
+
+//-----------------------------
+//edit
+ImgWarper.Point.prototype.norm = function (o) {
+  return Math.sqrt( Math.pow((this.x - o.x),2) + Math.pow((this.y - o.y),2) );
 }
